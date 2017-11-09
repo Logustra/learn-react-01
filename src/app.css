@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+body {
+    font-family: "Lato", sans-serif;    
+}
+
+.container {
+    margin: 25px auto;
+}
+
+button:focus {
+    outline: none;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.video-title {
+    font-weight: 700;
+}
+
+.video-description {
+    font-weight: 300;
+}
