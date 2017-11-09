@@ -19,7 +19,14 @@ class SearchBar extends Component {
                 <FormGroup>
                     <InputGroup>
                         <FormControl 
-                            onChange={event => this.onInputChange(event.target.value)} 
+                            value={this.state.query}
+                            onChange={event => this.onInputChange(event.target.value)}
+                            onKeyPress={event => {
+                                if (event.key === "Enter") {
+                                    event.preventDefault();
+                                    this.props.onSearch(this.state.query);
+                                }
+                            }} 
                             type="text" 
                             placeholder="Search Your Favorite Video..." 
                         />
